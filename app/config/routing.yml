@@ -1,0 +1,4 @@
+gestion:
+    resource: "@GestionBundle/Resources/config/routing.yml"
+    prefix:   /
+

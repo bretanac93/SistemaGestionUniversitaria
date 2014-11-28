@@ -1,0 +1,12 @@
+{% block content %}
+    <h1 class="title">Login</h1>
+
+
+    <form action="{{ path('check_path') }}" method="post">
+    <p>UserName <input type="type" name="_username" /><br /></p>
+    <p>Contrasena <input type="type" name="_password"/><br/></p>
+
+    <p> <input type="submit" value="enviar"> </p>
+</form>
+
+{% endblock %}

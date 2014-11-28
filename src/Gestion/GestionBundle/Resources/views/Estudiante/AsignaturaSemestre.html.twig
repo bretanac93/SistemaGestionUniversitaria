@@ -1,0 +1,7 @@
+<ul>
+	{% for asignatura in asignaturas %}
+		<li>
+			<a href="{{ path('EvaluacionAsignatura' , { 'AsignaturaId' : asignatura.id} ) }}">{{asignatura.Nombre}}</a>
+		</li>
+	{% endfor %}
+</ul>

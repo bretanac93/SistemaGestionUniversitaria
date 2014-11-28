@@ -1,0 +1,30 @@
+evaluacion:
+    path:     /
+    defaults: { _controller: "GestionBundle:Evaluacion:index" }
+
+evaluacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionBundle:Evaluacion:show" }
+
+evaluacion_new:
+    path:     /new
+    defaults: { _controller: "GestionBundle:Evaluacion:new" }
+
+evaluacion_create:
+    path:     /create
+    defaults: { _controller: "GestionBundle:Evaluacion:create" }
+    requirements: { _method: post }
+
+evaluacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionBundle:Evaluacion:edit" }
+
+evaluacion_update:
+    path:     /{id}/update
+    defaults: { _controller: "GestionBundle:Evaluacion:update" }
+    requirements: { _method: post|put }
+
+evaluacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionBundle:Evaluacion:delete" }
+    requirements: { _method: post|delete }

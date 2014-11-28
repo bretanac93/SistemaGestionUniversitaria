@@ -1,0 +1,34 @@
+estudiante:
+    path:     /
+    defaults: { _controller: "GestionBundle:Estudiante:index" }
+
+estudiante_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionBundle:Estudiante:show" }
+
+estudiante_new:
+    path:     /new
+    defaults: { _controller: "GestionBundle:Estudiante:new" }
+
+estudiante_create:
+    path:     /create
+    defaults: { _controller: "GestionBundle:Estudiante:create" }
+    requirements: { _method: post }
+
+estudiante_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionBundle:Estudiante:edit" }
+
+estudiante_update:
+    path:     /{id}/update
+    defaults: { _controller: "GestionBundle:Estudiante:update" }
+    requirements: { _method: post|put }
+
+estudiante_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionBundle:Estudiante:delete" }
+    requirements: { _method: post|delete }
+
+estudiante_AsiganturaSemestre:
+    path: /{SemestreId}
+    defaults: { _controller: "GestionBundle:Estudiante:AsignaturaSemestre" }

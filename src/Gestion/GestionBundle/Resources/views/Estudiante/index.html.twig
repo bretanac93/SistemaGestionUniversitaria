@@ -1,0 +1,60 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Estudiante list</h1>
+
+    <h2>Primer Ano</h2>
+        <h3><a href="{{ path('estudiante_AsiganturaSemestre' , {'SemestreId':1}) }}">Primer Semestre</a></h3>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Telf</th>
+                <th>Adress</th>
+                <th>Photo</th>
+                <th>Facultad</th>
+                <th>Carrera</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('estudiante_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nombre }}</td>
+                <td>{{ entity.edad }}</td>
+
+                <td>{{ entity.telf }}</td>
+                <td>{{ entity.adress }}</td>
+                <td>{{ entity.photo }}</td>
+                <td>{{ entity.facultad }}</td>
+                <td>{{ entity.carrera }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('estudiante_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('estudiante_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                    {% if is_granted('ROLE_PROFESOR') %}
+                        <li><a href="{{ path('evaluacion_new') }}">Subir Evaluacion</a></li>
+                    {% endif %}
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('estudiante_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+{% endblock %}

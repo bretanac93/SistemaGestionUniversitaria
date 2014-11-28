@@ -1,0 +1,34 @@
+asignatura:
+    path:     /
+    defaults: { _controller: "GestionBundle:Asignatura:index" }
+
+asignatura_show:
+    path:     /{id}/show
+    defaults: { _controller: "GestionBundle:Asignatura:show" }
+
+asignatura_new:
+    path:     /new
+    defaults: { _controller: "GestionBundle:Asignatura:new" }
+
+asignatura_create:
+    path:     /create
+    defaults: { _controller: "GestionBundle:Asignatura:create" }
+    requirements: { _method: post }
+
+asignatura_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "GestionBundle:Asignatura:edit" }
+
+asignatura_update:
+    path:     /{id}/update
+    defaults: { _controller: "GestionBundle:Asignatura:update" }
+    requirements: { _method: post|put }
+
+asignatura_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "GestionBundle:Asignatura:delete" }
+    requirements: { _method: post|delete }
+
+EvaluacionAsignatura:
+    path: /{AsignaturaId}
+    defaults: { _controller: "GestionBundle:Asignatura:EvaluacionAsignatura" }

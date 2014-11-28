@@ -1,0 +1,6 @@
+services:
+    gestion_gestionbundle_estudiante.form.type:
+        class: Gestion\GestionBundle\Form\EstudianteType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+          - { name: form.type, alias: gestion_gestionbundle_estudiante }
